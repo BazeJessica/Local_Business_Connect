@@ -1,4 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #6047eb (Deep Purple);
+  --secondary-color: #0f1111 (Teal);
+  --accent-color: #ff7043 (Orange);
+  --background-colors: #f9fafc (Light Gray), #ffffff (White);
+  --text-colors: #333333 (Dark Gray), #666666 (Medium Gray);
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+footer {
+  background-color: var(--secondary-color);
+}
