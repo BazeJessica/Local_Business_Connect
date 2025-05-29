@@ -8,8 +8,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { ForBusinessComponent } from './components/for-business/for-business.component';
 const routes: Routes = [
-  { path: '', component: AboutUsComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutUsComponent },
+  { path: '', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'signup', component: SignupComponent },
