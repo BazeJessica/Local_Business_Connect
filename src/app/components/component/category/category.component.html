@@ -1,3 +1,7 @@
-<div>
-    
+<div class="category-card">
+    <div class="card" *ngFor="let category of categories ">
+        <img [src]="category.img" alt="{{category.name}} "/>
+         <h2>{{category.name}}</h2>
+         <p>{{category.description}}</p>
+    </div>
 </div>

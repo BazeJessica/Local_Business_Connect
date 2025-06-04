@@ -12,28 +12,29 @@ export class CategoryComponent {
       id: 1,
       name: 'Home Service',
       description: 'Cleaning, Cloth washing, Ironing',
-      img: '/house-vector.png'
+      img: 'assets/house-vector.png'
     },
     {
       id: 2,
       name: 'Beauty & Wellness',
       description: 'Braiding, Massage, Manicure',
-      img: '/wellness.png'
+      img: 'assets/wellnes.png'
     },
   
     {
       id: 3,
       name: 'Fitness & Health',
       description: 'Coaching, Equipment rental, Fitness sessions',
-      img: '/fitness.jpeg'
+      img: 'assets/fitness.png'
     },
     {
       id: 4,
       name: 'Books',
       description: 'Reading clubs, Book rentals, Writing help',
-      img: '/book.png'
+      img: 'assets/book.png'
     }
   ];
+name: any;
   
 
 }
