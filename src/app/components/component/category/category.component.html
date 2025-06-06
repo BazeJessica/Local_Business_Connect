@@ -1,7 +1,16 @@
-<div class="category-card">
-    <div class="card" *ngFor="let category of categories ">
-        <img [src]="category.img" alt="{{category.name}} "/>
-         <h2>{{category.name}}</h2>
-         <p>{{category.description}}</p>
+<div class="category-card-container">
+  <div class="card" *ngFor="let category of categories">
+    <img
+      [src]="category.img"
+      alt="{{ category.name }}"
+      class="category-image"
+    />
+    <div class="content">
+      <h2 class="content-title">{{ category.name }}</h2>
+      <p class="content-description">
+        {{ category.description }}
+      </p>
+      <a [href]="category.url"><button>Explore</button></a>
     </div>
+  </div>
 </div>

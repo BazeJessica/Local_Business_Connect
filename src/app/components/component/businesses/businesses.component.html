@@ -1,0 +1,17 @@
+<div class="business-list-container">
+    <div *ngFor="let business of visibleBusinesses" class="business-card">
+      <img [src]="business.img" [alt]="business.name" />
+      <h3>{{ business.name }}</h3>
+      <p>{{ business.description }}</p>
+      <small>{{ business.category }}</small>
+    </div>
+  </div>
+  
+  <button
+    *ngIf="visibleBusinesses.length < businesses.length"
+    (click)="showMore()"
+    class="explore-button"
+  >
+    Explore All Businesses
+  </button>
+  
