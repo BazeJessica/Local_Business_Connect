@@ -30,10 +30,19 @@
       <div class="sConnect-wrapper">
         <div *ngFor="let item of valueItems" class="sConnect-content">
           <div class="value-icon">{{ item.icon }}</div>
-          <h3 class="sConnect-icon">{{ item.title }}</h3>
+          <h3 class="sConnect-title">{{ item.title }}</h3>
           <p class="sConnect-description">{{ item.description }}</p>
         </div>
       </div>
-         
+    </div>
+    <div class="testimonies">
+      <h1 class="testimonies-title">What Our Customers Say</h1>
+      <p class="testimonies-subtitle">Join thousands of satisfied customers who found their perfect service provider</p>
+      <div class="testimonials-container">
+        <app-testimonies />
+      </div>
+    </div>
+    <div>
+      <app-footer />
     </div>
   </div>

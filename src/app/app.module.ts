@@ -15,6 +15,7 @@ import { ForBusinessComponent } from './components/for-business/for-business.com
 import { CategoryComponent } from './components/component/category/category.component';
 import { MaterialModule } from './material.module';
 import { BusinessesComponent } from './components/component/businesses/businesses.component';
+import { TestimoniesComponent } from './components/testimonies/testimonies.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BusinessesComponent } from './components/component/businesses/businesse
     LoginComponent,
     ForBusinessComponent,
     CategoryComponent,
-    BusinessesComponent
+    BusinessesComponent,
+    TestimoniesComponent
   ],
   imports: [
     BrowserModule,

@@ -113,7 +113,7 @@
       gap: 1rem;
 
       .sConnect-content {
-        background-color: white;
+        background-color: rgb(240, 237, 237);
         color: #333;
         border-radius: 8px;
         padding: 1rem;
@@ -136,4 +136,17 @@
       }
     }
   }
+  .testimonies{
+  padding: 20px 20px;
+  .testimonies-title{
+    font-weight: 700;
+    font-size: 45px;
+    word-spacing: 4px;
+    text-align: center;
+  }
+  .testimonies-subtitle{
+    font-size: 20px;
+      text-align: center;
+  }
+}
 }
