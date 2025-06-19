@@ -1,0 +1,45 @@
+ <div class="form-step" data-step="5">
+    <h2 class="step-title">Service Offerings & Pricing</h2>
+    <p class="step-subtitle">
+      Add your services and set competitive pricing
+    </p>
+
+    <button class="add-service-btn" onclick="addService()">
+      + Add Service
+    </button>
+
+    <div id="services-container">
+      <div class="service-item">
+        <input type="text" placeholder="Service Name" required />
+        <input type="text" placeholder="Description" />
+        <input
+          type="number"
+          placeholder="Price ($)"
+          min="0"
+          step="0.01"
+          required
+        />
+        <input
+          type="number"
+          placeholder="Duration (min)"
+          min="15"
+          step="15"
+          required
+        />
+        <button
+          type="button"
+          onclick="removeService(this)"
+          style="
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+          "
+        >
+          Remove
+        </button>
+      </div>
+    </div>
+  </div>

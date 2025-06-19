@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="header">
+    <h1>Join Our Platform</h1>
+    <p>Register your business and start connecting with customers</p>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar">
+      <div
+        *ngFor="let step of steps; let i = index"
+        class="progress-step"
+        [class.active]="currentstep === i + 1"
+        (click)="goToStep(i + 1)"
+      >
+        <div class="progress-circle">{{ i + 1 }}</div>
+        <div class="step-label">{{ step.label }}</div>
+        <div
+          *ngIf="i < steps.length - 1"
+          class="progress-line"
+        ></div>
+      </div>
+    </div>
+
+    <div class="step-content">
+      <ng-container [ngSwitch]="currentstep">
+        <app-services *ngSwitchCase="2"></app-services>
+        <app-schedule *ngSwitchCase="3"></app-schedule>
+        <app-media *ngSwitchCase="4"></app-media>
+        <app-pricing *ngSwitchCase="5"></app-pricing>
+        <app-availability *ngSwitchCase="6"></app-availability>
+      </ng-container>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" class="btn btn-secondary" (click)="previousStep()">
+        Previous
+      </button>
+      <button type="button" class="btn btn-primary" (click)="nextStep()">
+        Next Step
+      </button>
+    </div>
+  </div>
+</div>

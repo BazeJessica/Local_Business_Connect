@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SignupComponent } from './components/signup/signup.component';
@@ -16,6 +16,13 @@ import { CategoryComponent } from './components/component/category/category.comp
 import { MaterialModule } from './material.module';
 import { BusinessesComponent } from './components/component/businesses/businesses.component';
 import { TestimoniesComponent } from './components/testimonies/testimonies.component';
+import { BusinessComponent } from "./components/registerPages/business/business.component"
+import { CustomersComponent } from './components/registerPages/customers/customers.component';
+import { ScheduleComponent } from './components/registerPages/steps/schedule/schedule.component';
+import { MediaComponent } from './components/registerPages/steps/media/media.component';
+import { PricingComponent } from './components/registerPages/steps/pricing/pricing.component';
+import { AvailabilityComponent } from './components/registerPages/steps/availability/availability.component';
+import { BusinessDetailsComponent } from './components/registerPages/steps/business-details/business-details.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +38,14 @@ import { TestimoniesComponent } from './components/testimonies/testimonies.compo
     ForBusinessComponent,
     CategoryComponent,
     BusinessesComponent,
-    TestimoniesComponent
+    TestimoniesComponent,
+    BusinessComponent,
+    CustomersComponent,
+    ScheduleComponent,
+    MediaComponent,
+    PricingComponent,
+    AvailabilityComponent,
+    BusinessDetailsComponent,
   ],
   imports: [
     BrowserModule,
