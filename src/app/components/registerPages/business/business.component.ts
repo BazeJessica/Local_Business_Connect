@@ -13,7 +13,6 @@ export class BusinessComponent {
     { label: 'Services' },
     { label: 'Schedule' },
     { label: 'Media' },
-    { label: 'Pricing' },
     { label: 'Availability' },
   ];
   goToStep(step: number) {

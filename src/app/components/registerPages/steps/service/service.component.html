@@ -1,0 +1,48 @@
+<div class="form-step" data-step="2">
+    <h2 class="step-title">Service Categories</h2>
+    <p class="step-subtitle">Select the categories that best describe your services</p>
+  
+    <div class="checkbox-group">
+      <div class="checkbox-item">
+        <input type="checkbox" id="beauty" value="beauty" />
+        <label for="beauty">Beauty & Wellness</label>
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox" id="fitness" value="fitness" />
+        <label for="fitness">Fitness & Health</label>
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox" id="home" value="home" />
+        <label for="home">Home Services</label>
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox" id="auto" value="auto" />
+        <label for="auto">Food</label>
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox" id="pet" value="pet" />
+        <label for="pet">Sports</label>
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox" id="education" value="education" />
+        <label for="education">Books</label>
+      </div>
+    </div>
+  </div>
+  
+  <div class="form-step" data-step="5">
+    <h2 class="step-title">Service Offerings & Pricing</h2>
+    <p class="step-subtitle">Add your services and set competitive pricing</p>
+    
+    <div id="services-container">
+      <div class="service-item">
+        <input type="text" class="service-input" placeholder="Service Name" required />
+        <input type="text" class="service-input" placeholder="Description" />
+        <input type="number" class="service-input" placeholder="Price ($)" min="0" step="0.01" required />
+        <input type="number" class="service-input" placeholder="Duration (min)" min="15" step="15" required />
+      </div>
+       </div>
+    <button class="add-service-btn" type="button" onclick="addService()">+ Add Service</button>
+    <button type="button" class="remove-service-btn" onclick="removeService(this)">Remove</button>
+  </div>
+  

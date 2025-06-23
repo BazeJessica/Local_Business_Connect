@@ -23,10 +23,10 @@
 
     <div class="step-content">
       <ng-container [ngSwitch]="currentstep">
-        <app-services *ngSwitchCase="2"></app-services>
+        <app-business-details *ngSwitchCase="1"></app-business-details>
+        <app-service *ngSwitchCase="2"></app-service>
         <app-schedule *ngSwitchCase="3"></app-schedule>
         <app-media *ngSwitchCase="4"></app-media>
-        <app-pricing *ngSwitchCase="5"></app-pricing>
         <app-availability *ngSwitchCase="6"></app-availability>
       </ng-container>
     </div>

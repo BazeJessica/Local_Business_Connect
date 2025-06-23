@@ -9,7 +9,6 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { ServicesComponent } from './components/services/services.component';
 import { LoginComponent } from './components/login/login.component';
 import { ForBusinessComponent } from './components/for-business/for-business.component';
 import { CategoryComponent } from './components/component/category/category.component';
@@ -20,9 +19,9 @@ import { BusinessComponent } from "./components/registerPages/business/business.
 import { CustomersComponent } from './components/registerPages/customers/customers.component';
 import { ScheduleComponent } from './components/registerPages/steps/schedule/schedule.component';
 import { MediaComponent } from './components/registerPages/steps/media/media.component';
-import { PricingComponent } from './components/registerPages/steps/pricing/pricing.component';
 import { AvailabilityComponent } from './components/registerPages/steps/availability/availability.component';
 import { BusinessDetailsComponent } from './components/registerPages/steps/business-details/business-details.component';
+import { ServiceComponent } from './components/registerPages/steps/service/service.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +32,6 @@ import { BusinessDetailsComponent } from './components/registerPages/steps/busin
     AboutUsComponent,
     ContactComponent,
     SignupComponent,
-    ServicesComponent,
     LoginComponent,
     ForBusinessComponent,
     CategoryComponent,
@@ -43,9 +41,9 @@ import { BusinessDetailsComponent } from './components/registerPages/steps/busin
     CustomersComponent,
     ScheduleComponent,
     MediaComponent,
-    PricingComponent,
     AvailabilityComponent,
     BusinessDetailsComponent,
+    ServiceComponent,
   ],
   imports: [
     BrowserModule,
