@@ -1,0 +1,21 @@
+<div>
+    <mat-drawer-container class="example-container">
+      <mat-drawer mode="side" opened>
+        <h1>Business Dashboard</h1>
+        <nav class="nav-list">
+          <a routerLink="/overview"><svg>...</svg> Overview</a>
+          <a routerLink="/calendar"><svg>...</svg> Calender</a>
+          <a routerLink="/bookings"><svg>...</svg> Bookings</a>
+          <a routerLink="/profile"><svg>...</svg> Profile & Listings</a>
+          <a routerLink="/customer"><svg>...</svg> Customers</a>
+          <a routerLink="/services"><svg>...</svg> Services</a>
+          <a routerLink="/settings"><svg>...</svg> Settings</a>
+        </nav>
+      </mat-drawer>
+
+      <mat-drawer-content>
+        <router-outlet></router-outlet>
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>
+  

@@ -8,15 +8,30 @@ import { LoginComponent } from './components/login/login.component';
 import { ForBusinessComponent } from './components/for-business/for-business.component';
 import { BusinessComponent } from './components/registerPages/business/business.component';
 import { CustomersComponent } from './components/registerPages/customers/customers.component';
+import { BusinessDashboardComponent } from './components/registerPages/business-dashboard/business-dashboard.component';
+import { OverviewComponent } from './components/registerPages/steps/overview/overview.component';
+import { CalenderComponent } from './components/registerPages/steps/calender/calender.component';
+import { BookingsComponent } from './components/registerPages/steps/bookings/bookings.component';
+import { ProfileComponent } from './components/registerPages/steps/profile/profile.component';
+import { ServicesComponent } from './components/registerPages/steps/services/services.component';
+import { SettingsComponent } from './components/registerPages/steps/settings/settings.component';
 const routes: Routes = [
   { path: 'about', component: AboutUsComponent },
+  {path: 'businessDashboard', component: BusinessDashboardComponent},
   { path: '', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
   { path: 'for-business', component: ForBusinessComponent},
-  {path: 'registerBusiness', component:BusinessComponent},
-  {path: 'registerCustomer', component:CustomersComponent}
+  { path: 'registerBusiness', component:BusinessComponent},
+  { path: 'registerCustomer', component:CustomersComponent},
+  { path: 'overview', component: OverviewComponent},
+  { path: 'calendar', component: CalenderComponent},
+  { path: 'bookings', component: BookingsComponent },
+  { path: 'profile', component: ProfileComponent},
+  { path: 'customer', component: CustomersComponent},
+  { path: 'services',component: ServicesComponent},
+  { path: 'settings', component: SettingsComponent},
 ];
 
 @NgModule({
