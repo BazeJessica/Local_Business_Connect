@@ -25,13 +25,20 @@ const routes: Routes = [
   { path: 'for-business', component: ForBusinessComponent},
   { path: 'registerBusiness', component:BusinessComponent},
   { path: 'registerCustomer', component:CustomersComponent},
-  { path: 'overview', component: OverviewComponent},
-  { path: 'calendar', component: CalenderComponent},
-  { path: 'bookings', component: BookingsComponent },
-  { path: 'profile', component: ProfileComponent},
-  { path: 'customer', component: CustomersComponent},
-  { path: 'services',component: ServicesComponent},
-  { path: 'settings', component: SettingsComponent},
+  { 
+    path: '',
+    component: BusinessDashboardComponent,
+    children:[
+      { path: 'overview', component: OverviewComponent},
+      { path: 'calendar', component: CalenderComponent},
+      { path: 'bookings', component: BookingsComponent },
+      { path: 'profile', component: ProfileComponent},
+      { path: 'customer', component: CustomersComponent},
+      { path: 'services',component: ServicesComponent},
+      { path: 'settings', component: SettingsComponent},
+    ]
+  }
+ 
 ];
 
 @NgModule({

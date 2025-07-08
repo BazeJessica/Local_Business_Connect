@@ -1,1 +1,49 @@
-<p>overview works!</p>
+<div class="dashboard-container">
+    <h1 class="overview-header">Dashboard Overview</h1>
+    <!-- 📊 STATISTICS SECTION -->
+    <div class="stats-section">
+      <div class="stat-card" *ngFor="let stat of stats">
+        <p class="stat-title">{{ stat.title }}</p>
+        <p class="stat-value">{{ stat.value }}</p>
+        <p class="stat-change"><img [src]="stat.trend" alt="">{{ stat.change }} <span class="stat-note">{{ stat.note }}</span></p>
+        <div class="stat-icon"><img [src]="stat.icon" alt=""></div> <!-- Replace with actual icon component if needed -->
+      </div>
+    </div>
+  
+    <!-- 📅 RECENT BOOKINGS SECTION -->
+    <div class="bookings-section">
+      <h3 class="section-title">Recent Bookings</h3>
+      <div class="booking-card" *ngFor="let booking of recentBookings">
+        <div class="booking-info">
+          <p class="booking-name">{{ booking.name }}</p>
+          <p class="booking-service">{{ booking.service }}</p>
+        </div>
+        <div class="booking-meta">
+          <p class="booking-time">{{ booking.time }}</p>
+          <span class="booking-status"
+            [ngClass]="{
+              'status-confirmed': booking.status === 'confirmed',
+              'status-pending': booking.status === 'pending'
+            }">
+            {{ booking.status }}
+          </span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- 📈 PERFORMANCE METRICS SECTION -->
+    <div class="metrics-section">
+      <h3 class="section-title">Performance Metrics</h3>
+      <div class="metric-card" *ngFor="let metric of metrics">
+        <span class="metric-name">{{ metric.name }}</span>
+        <div class="metric-bar-container">
+          <div class="metric-bar-bg">
+            <div class="metric-bar-fill" [style.backgroundColor]="metric.color" [style.width.%]="metric.percent"></div>
+          </div>
+        </div>
+        <span class="metric-percent">{{ metric.percent }}%</span>
+      </div>
+    </div>
+  
+  </div>
+  

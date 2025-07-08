@@ -1,10 +1,64 @@
-.example-container {
-    width: auto;
-    height: 700px;
-    margin: 10px;
-    border: 1px solid #555;
-    /* The background property is added to clearly distinguish the borders between drawer and main
-       content */
-    background: #eee;
-  }
-  
+mat-drawer-container{
+   height: 100vh;
+   display: flex;
+   background-color: #f9fafb;
+   font-size: 20px;
+   margin: 10px;
+ }
+ 
+ mat-drawer {
+   width: 500px;
+   background-color: #100b3f; // Dark gray
+   color: #ffffff;
+   padding: 20px 15px;
+   box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ mat-drawer h1 {
+   font-size: 1.5rem;
+   letter-spacing: 2px;
+   margin-bottom: 20px;
+   font-weight: 600;
+   color: #f3f4f6; // Lighter text
+ }
+ 
+ .nav-list {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   letter-spacing: 2px;
+   gap: 2px;
+   text-align: left;
+   padding-bottom: 30px;
+   margin: 0;
+ }
+ 
+ .nav-list a {
+   display: flex;
+   align-items: center;
+   padding: 20px 20px;
+   margin-bottom: 50px;
+   margin-right: 10px;
+   border-radius: 0.5rem;
+   text-decoration: none;
+   color: #d1d5db; 
+   font-size: 1.4rem;
+   transition: background-color 0.2s ease, color 0.2s ease;
+ }
+
+ .nav-list a:hover {
+   background-color: #374151; 
+   color: #ffffff;
+ }
+ 
+ .nav-list a.active {
+   background-color: #244da5; 
+   color: #ffffff;
+ }
+ 
+ mat-drawer-content {
+   flex: 1;
+   overflow: auto;
+   background-color: #e6e6e6;
+ }
+ 
