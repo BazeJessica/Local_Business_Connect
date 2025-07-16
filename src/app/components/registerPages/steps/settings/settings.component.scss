@@ -1,0 +1,82 @@
+.settings-container {
+    padding: 32px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+  
+  .settings-header h2 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 24px;
+  }
+  
+  .settings-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .settings-card {
+    background-color: #fff;
+    padding: 20px 24px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  }
+  
+  .settings-card h3 {
+    margin-bottom: 16px;
+    color: #333;
+    font-size: 20px;
+  }
+  
+  .setting-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 12px;
+  }
+  
+  .setting-row label,
+  .setting-row span {
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .setting-row select,
+  .setting-row textarea,
+  .setting-row input[type="checkbox"] {
+    flex-shrink: 0;
+    font-size: 14px;
+  }
+  
+  .setting-row textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  
+  .delete-button {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #b91c1c;
+  }
+  

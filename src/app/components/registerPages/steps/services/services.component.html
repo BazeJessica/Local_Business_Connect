@@ -1,1 +1,35 @@
-<p>services works!</p>
+<div class="service-container">
+  <!-- Header -->
+  <div class="service-header">
+    <h2>Service Management</h2>
+    <button class="add-service-button">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+        <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+      </svg>
+      <span>Add Service</span>
+    </button>
+  </div>
+
+  <!-- Service List -->
+  <div class="service-list">
+    <div *ngFor="let service of services" class="service-card">
+      <div class="service-card-header">
+        <h3>{{ service.name }}</h3>
+        <span class="status {{ service.status }}">{{ service.status }}</span>
+      </div>
+
+      <div class="service-info">
+        <div><span class="label">Price</span><span>{{ service.price }}</span></div>
+        <div><span class="label">Duration</span><span>{{ service.duration }}</span></div>
+        <div><span class="label">Bookings</span><span>{{ service.bookings }}</span></div>
+      </div>
+
+      <div class="service-actions">
+        <button class="edit-button">Edit</button>
+        <button class="status-toggle-button">
+          {{ service.status === 'active' ? 'Deactivate' : 'Activate' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

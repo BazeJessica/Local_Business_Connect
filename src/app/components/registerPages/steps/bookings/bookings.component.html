@@ -1,1 +1,66 @@
-<p>bookings works!</p>
+<div class="booking-container">
+  <!-- Header -->
+  <header class="booking-header">
+    <h2>Bookings Management</h2>
+    <div class="booking-controls">
+      <div class="search-wrapper">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+          <path
+            d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+        </svg>
+        <input type="text" placeholder="Search bookings..." />
+      </div>
+      <button class="filter-button">Filter</button>
+    </div>
+  </header>
+
+  <main class="booking-main">
+    <!-- Pending Bookings -->
+    <section class="booking-section pending">
+      <h3>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+          <path
+            d="..." />
+        </svg>
+        Pending Bookings ({{ pendingBooking.length }})
+      </h3>
+      <ng-container *ngFor="let booking of pendingBooking">
+        <article class="booking-card">
+          <div class="booking-details">
+            <p class="client">{{ booking.client }}</p>
+            <p class="info">{{ booking.service }} • {{ booking.date }} at {{ booking.time }}</p>
+            <p class="id">{{ booking.id }}</p>
+          </div>
+          <div class="booking-actions">
+            <button class="btn confirm">Confirm</button>
+            <button class="btn decline">Decline</button>
+          </div>
+        </article>
+      </ng-container>
+    </section>
+
+    <!-- Confirmed Bookings -->
+    <section class="booking-section confirmed">
+      <h3>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+          <path
+            d="..." />
+        </svg>
+        Confirmed Bookings ({{ confirmedBooking.length }})
+      </h3>
+      <ng-container *ngFor="let booking of confirmedBooking">
+        <article class="booking-card">
+          <div class="booking-details">
+            <p class="client">{{ booking.client }}</p>
+            <p class="info">{{ booking.service }} • {{ booking.date }} at {{ booking.time }}</p>
+            <p class="id">{{ booking.id }}</p>
+          </div>
+          <div class="booking-actions">
+            <button class="btn edit">Edit</button>
+            <button class="btn cancel">Cancel</button>
+          </div>
+        </article>
+      </ng-container>
+    </section>
+  </main>
+</div>

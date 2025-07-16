@@ -1,1 +1,89 @@
-<p>settings works!</p>
+<div class="settings-container">
+  <div class="settings-header">
+    <h2>Settings & Preferences</h2>
+  </div>
+
+  <div class="settings-section">
+    <!-- Notification Settings -->
+    <div class="settings-card">
+      <h3>Notification Settings</h3>
+      <div *ngFor="let notification of notifications" class="setting-row">
+        <span>{{ notification.label }}</span>
+        <input type="checkbox" [checked]="notification.checked" />
+      </div>
+    </div>
+
+    <!-- Booking Settings -->
+    <div class="settings-card">
+      <h3>Booking Settings</h3>
+      <div class="setting-row">
+        <label>Advance booking limit</label>
+        <select>
+          <option>30 days</option>
+          <option>60 days</option>
+          <option>90 days</option>
+        </select>
+      </div>
+      <div class="setting-row">
+        <label>Minimum notice period</label>
+        <select>
+          <option>2 hours</option>
+          <option>4 hours</option>
+          <option>24 hours</option>
+        </select>
+      </div>
+      <div class="setting-row">
+        <label>Auto-confirm bookings</label>
+        <select>
+          <option>Manual approval</option>
+          <option>Auto-confirm all</option>
+          <option>Auto-confirm regulars</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Payment Settings -->
+    <div class="settings-card">
+      <h3>Payment Settings</h3>
+      <div class="setting-row">
+        <label>Payment methods</label>
+        <div class="checkbox-group" *ngFor="let method of paymentMethod">
+          <input type="checkbox" [checked]="method.checked" />
+          <span>{{ method.label }}</span>
+        </div>
+      </div>
+      <div class="setting-row">
+        <label>Cancellation policy</label>
+        <textarea rows="3">
+Cancellations must be made at least 24 hours in advance. Late cancellations may incur a fee.
+        </textarea>
+      </div>
+    </div>
+
+    <!-- Account Settings -->
+    <div class="settings-card">
+      <h3>Account Settings</h3>
+      <div class="setting-row">
+        <label>Time zone</label>
+        <select>
+          <option>Eastern Time (ET)</option>
+          <option>Central Time (CT)</option>
+          <option>Mountain Time (MT)</option>
+          <option>Pacific Time (PT)</option>
+        </select>
+      </div>
+      <div class="setting-row">
+        <label>Language</label>
+        <select>
+          <option>English</option>
+          <option>Spanish</option>
+          <option>French</option>
+          <option>German</option>
+        </select>
+      </div>
+      <div class="setting-row">
+        <button class="delete-button">Delete Account</button>
+      </div>
+    </div>
+  </div>
+</div>
