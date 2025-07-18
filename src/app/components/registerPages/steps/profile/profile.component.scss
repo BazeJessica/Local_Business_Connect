@@ -1,0 +1,147 @@
+.profile-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 32px;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9fafb;
+    color: #1f2937;
+  }
+  
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  
+  .profile-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .edit-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .edit-button svg {
+    fill: white;
+  }
+  
+  .section {
+    background-color: white;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  }
+  
+  .section h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: #111827;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #374151;
+  }
+  
+  .input-group input,
+  .input-group textarea,
+  .business-hours input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f9fafb;
+  }
+  
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contact-item input {
+    flex: 1;
+  }
+  
+  .business-hours {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    align-items: center;
+  }
+  
+  .business-hours span {
+    font-weight: 500;
+    min-width: 80px;
+  }
+  
+  .reviews-summary {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .rating-score {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f59e0b;
+  }
+  
+  .rating-stars {
+    margin: 8px 0;
+  }
+  
+  .rating-count {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .rating-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .rating-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .progress-bar-bg {
+    flex: 1;
+    height: 8px;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    position: relative;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background-color: #facc15;
+    border-radius: 9999px;
+  }
+  
