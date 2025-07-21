@@ -4,7 +4,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
-import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -24,19 +23,18 @@ import { BusinessDetailsComponent } from './components/registerPages/steps/busin
 import { ServiceComponent } from './components/registerPages/steps/service/service.component';
 import { BusinessDashboardComponent } from './components/registerPages/business-dashboard/business-dashboard.component';
 import { OverviewComponent } from './components/registerPages/steps/overview/overview.component';
-import { CalenderComponent } from './components/registerPages/steps/calender/calender.component';
 import { BookingsComponent } from './components/registerPages/steps/bookings/bookings.component';
 import { ServicesComponent } from './components/registerPages/steps/services/services.component';
-import { NotificationsComponent } from './components/registerPages/steps/notifications/notifications.component';
 import { SettingsComponent } from './components/registerPages/steps/settings/settings.component';
 import { ProfileComponent } from './components/registerPages/steps/profile/profile.component';
 import { RouterModule } from '@angular/router';
-
+import { CustomerComponent } from './components/registerPages/steps/customer/customer.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
+    FooterComponent,
     AppComponent,
     NavComponent,
-    FooterComponent,
     HomeComponent,
     AboutUsComponent,
     ContactComponent,
@@ -55,12 +53,11 @@ import { RouterModule } from '@angular/router';
     ServiceComponent,
     BusinessDashboardComponent,
     OverviewComponent,
-    CalenderComponent,
     BookingsComponent,
     ServicesComponent,
-    NotificationsComponent,
     SettingsComponent,
     ProfileComponent,
+    CustomerComponent,
   ],
   imports: [
     BrowserModule,
