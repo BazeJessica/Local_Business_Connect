@@ -60,17 +60,9 @@ export class BusinessesComponent {
     // Add as many more as needed...
   ];
 visibleBusinesses: any = [];
-itemsToShow = 3;
+itemsToShow = 6;
 
 ngOnInit() {
-  this.visibleBusinesses= this.businesses.slice(0, this.itemsToShow);
-}
-
-showMore() {
-  this.itemsToShow += 3;
-  this.visibleBusinesses = this.businesses.slice(0, this.itemsToShow);
-}
-
-  
+  this.visibleBusinesses= this.businesses.slice(0, this.itemsToShow);} 
 
 }

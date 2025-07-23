@@ -1,1 +1,22 @@
-<p>for-business works!</p>
+<div class="filter-wrapper">
+    <div class="filter">
+      <h4>Filter by category</h4>
+      <mat-form-field>
+        <mat-label>Categories</mat-label>
+        <mat-select>
+          @for (category of Categories; track category) {
+            <mat-option>{{ category.viewValue }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  
+<div class="business-list-container">
+  <div *ngFor="let business of businesses" class="business-card">
+    <img [src]="business.img" [alt]="business.name" />
+    <h3>{{ business.name }}</h3>
+    <p>{{ business.description }}</p>
+    <small>{{ business.category }}</small>
+  </div>
+</div>

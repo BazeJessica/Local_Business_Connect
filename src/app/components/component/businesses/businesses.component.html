@@ -8,10 +8,11 @@
   </div>
   
   <button
-    *ngIf="visibleBusinesses.length < businesses.length"
-    (click)="showMore()"
-    class="explore-button"
-  >
-    Explore All Businesses
-  </button>
+  *ngIf="visibleBusinesses.length < businesses.length"
+  [routerLink]="['/for-business']"
+  class="explore-button"
+>
+  Explore All Businesses
+</button>
+
   
