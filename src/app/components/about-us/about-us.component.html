@@ -1,1 +1,68 @@
-<p>about-us works!</p>
+<div>
+    <div class="hero-section">
+        <img src="/assets/logo.png" alt="Company Logo" class="logo">
+        <h1>Connecting Communities, <span> One Booking at a Time</span></h1>
+        <p>We bridge the gap between businesses and customers, creating meaningful connections that strengthen communities and drive growth.</p>
+    </div>
+    <div class="Stats-section">
+        <div *ngFor="let stat of stats">
+            <div><img [src]="stat.icon" alt=""></div>
+            <div>
+               <p>{{stat.value}}</p>
+               <p>{{stat.label}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="benefit-section">
+        <div *ngFor="let business of businessBenefits">
+            <div><img [src]="business.icon" alt=""></div>
+            <div>
+               <p>{{business.title}}</p>
+               <p>{{business.description}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="customer-section">
+        <div *ngFor="let customer of customerBenefits">
+            <div><img [src]="customer.icon" alt=""></div>
+            <div>
+               <p>{{customer.title}}</p>
+               <p>{{customer.description}}</p>
+            </div>
+        </div>
+    </div>
+    <section>
+        <h2>Our Story</h2>
+        <p>
+          In 2020, we noticed a growing disconnect between local businesses and their communities. Small businesses struggled to reach customers online, while people found it increasingly difficult to discover and book local services they could trust.
+        </p>
+        <p>
+          We founded this platform with a simple belief: technology should bring communities together, not drive them apart. By creating an intuitive, reliable connection between businesses and customers, we're helping local economies thrive.
+        </p>
+        <p>
+          Today, we're proud to serve thousands of businesses and hundreds of thousands of customers, facilitating millions of meaningful interactions that strengthen communities across the globe.
+        </p>
+        <div>
+          <!-- <Target /> -->
+          Our Mission: Empowering local businesses to thrive in the digital age
+        </div>
+        <div>
+          <div>
+            <div>98%</div>
+            <div>Customer Satisfaction</div>
+          </div>
+          <div>
+            <div>4.8★</div>
+            <div>Average Rating</div>
+          </div>
+          <div>
+            <div>24/7</div>
+            <div>Platform Availability</div>
+          </div>
+          <div>
+            <div>2M+</div>
+            <div>Happy Customers</div>
+          </div>
+        </div>
+      </section>      
+    </div>

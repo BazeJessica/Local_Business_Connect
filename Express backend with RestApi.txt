@@ -1,0 +1,103 @@
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+
+const App = () => {
+  const [posts, setPosts] = useState([]);
+  const [editText, setEditText] = useState({});
+  const [editId, setEditId] = useState(null);
+
+  useEffect(() => {
+    axios.get('/api/posts').then((response) => {
+      setPosts(response.data);
+    });
+  }, []);
+const deletePost = async (postId) => {
+    await axios.delete(`/api/posts/${postId}`);
+    // Fetch the updated posts
+    const res = await axios.get('/api/posts');
+    setPosts(res.data);
+  };
+  const updatePost = (id) => {
+    axios.put(`/api/posts/${id}`, {
+      text: editText[id],
+    }).then((response) => {
+      console.log(response.data);
+      setEditId(null);
+      setPosts(posts.map(post => post.id === id ? response.data : post));
+    });
+  };
+
+  return (
+    <div>
+      {posts.map((post) => (
+        <div key={post.id}>
+          {editId === post.id ? (
+            <>
+              <input 
+                value={editText[post.id] || ''} 
+                onChange={e => setEditText({ ...editText, [post.id]: e.target.value })} 
+              />
+              <button onClick={() => updatePost(post.id)}>Save</button>
+            </>
+          ) : (
+            <>
+              <p>{post.text}</p>
+              <button onClick={() => setEditId(post.id)}>Edit</button>
+            </>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default App;
+
+
+const express = require('express');
+const app = express();
+app.use(express.json());
+
+let posts = [
+  { id: 1, text: 'Hello, CodeSignal' },
+  { id: 2, text: 'I am loving these lessons' },
+];
+
+app.post('/api/posts', (req, res) => {
+  const newPost = req.body;
+  posts.push(newPost);
+  res.status(201).json(newPost);
+});
+
+// TODO: Add PUT endpoint for /api/posts/:id, updating the provided post
+// The updated post text is provided in the request's body
+app.put('/api/posts/:id', (req, res) => {
+  const postId = parseInt(req.params.id);
+  const updatedText = req.body.text;
+
+  const post = posts.find(p => p.id === postId);
+
+  if (post) {
+    post.text = updatedText;
+    res.json(post); // Return updated post
+  } else {
+    res.status(404).json({ message: 'Post not found' });
+  }
+});
+
+
+app.delete('/api/posts/:id', (req, res) => {
+  const index = posts.findIndex((post) => post.id === Number(req.params.id));
+  if (index !== -1) {
+    const deletedPost = posts.splice(index, 1);
+    res.json(deletedPost);
+  } else {
+    res.sendStatus(404);
+  }
+});
+
+app.get('/api/posts', (req, res) => {
+  res.json(posts);
+});
+
+app.listen(5000, () => console.log('App listening on port 5000'));
