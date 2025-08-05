@@ -1,0 +1,37 @@
+<section class="timeline-section">
+    <div class="container">
+      <div class="header">
+        <h2>Our Journey</h2>
+        <p>Key milestones in our growth story</p>
+      </div>
+  
+      <div class="timeline">
+        <div class="timeline-line"></div>
+  
+        <div class="timeline-items">
+          <div
+            *ngFor="let item of timeline; let idx = index"
+            class="timeline-item"
+            [ngClass]="{ 'reverse': idx % 2 !== 0 }"
+          >
+            <div class="content">
+              <div class="card">
+                <div class="year">{{ item.year }}</div>
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+              </div>
+            </div>
+  
+            <div class="icon-circle">
+              <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+              </svg>
+            </div>
+  
+            <div class="spacer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

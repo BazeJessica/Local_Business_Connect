@@ -30,6 +30,10 @@ import { ProfileComponent } from './components/registerPages/steps/profile/profi
 import { RouterModule } from '@angular/router';
 import { CustomerComponent } from './components/registerPages/steps/customer/customer.component';
 import { FooterComponent } from './footer/footer.component';
+import { TimelineComponent } from './components/component/sections/timeline/timeline.component';
+import { TestimonialComponent } from './components/component/sections/testimonial/testimonial.component';
+import { WorkFlowComponent } from './components/component/sections/work-flow/work-flow.component';
+import { OurStoryComponent } from './components/component/sections/our-story/our-story.component';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -58,6 +62,10 @@ import { FooterComponent } from './footer/footer.component';
     SettingsComponent,
     ProfileComponent,
     CustomerComponent,
+    TimelineComponent,
+    TestimonialComponent,
+    WorkFlowComponent,
+    OurStoryComponent,
   ],
   imports: [
     BrowserModule,
