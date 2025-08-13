@@ -15,6 +15,7 @@ import { ProfileComponent } from './components/registerPages/steps/profile/profi
 import { ServicesComponent } from './components/registerPages/steps/services/services.component';
 import { SettingsComponent } from './components/registerPages/steps/settings/settings.component';
 import { CustomersComponent } from './components/registerPages/customers/customers.component';
+import { BusinessServicesComponent } from './components/business-services/business-services.component';
 const routes: Routes = [
   { path: 'about', component: AboutUsComponent },
   {path: 'businessDashboard', component: BusinessDashboardComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'for-business', component: ForBusinessComponent},
   { path: 'registerBusiness', component:BusinessComponent},
   { path: 'registerCustomer', component:CustomersComponent},
+  {path: 'businessServices', component:BusinessServicesComponent},
   { 
     path: '',
     component: BusinessDashboardComponent,

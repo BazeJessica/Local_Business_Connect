@@ -29,5 +29,6 @@ export class HomeComponent {
       description: "All professionals are background-checked and insured for your peace of mind"
     }
   ];  
+authenticated: boolean = false;
 
 }

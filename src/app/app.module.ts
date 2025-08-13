@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -34,6 +36,7 @@ import { TimelineComponent } from './components/component/sections/timeline/time
 import { TestimonialComponent } from './components/component/sections/testimonial/testimonial.component';
 import { WorkFlowComponent } from './components/component/sections/work-flow/work-flow.component';
 import { OurStoryComponent } from './components/component/sections/our-story/our-story.component';
+import { BusinessServicesComponent } from './components/business-services/business-services.component';
 @NgModule({
   declarations: [
     FooterComponent,
@@ -66,12 +69,15 @@ import { OurStoryComponent } from './components/component/sections/our-story/our
     TestimonialComponent,
     WorkFlowComponent,
     OurStoryComponent,
+    BusinessServicesComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
+    ReactiveFormsModule,
+    CommonModule,
   ],
   exports:[RouterModule],
   providers: [],
