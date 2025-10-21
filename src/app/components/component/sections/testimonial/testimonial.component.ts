@@ -18,7 +18,7 @@ export class TestimonialComponent {
     {
       name: 'James Wilson',
       role: 'Regular Customer',
-      image: '👨‍🦲',
+      image: "👨‍🦲",
       quote: 'I love how easy it is to find and book services. The app remembers my preferences and suggests exactly what I need.',
       rating: 5
     },

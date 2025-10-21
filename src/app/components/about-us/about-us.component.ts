@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AboutUsComponent {
   stats = [
-    { icon: 'assets/house.png', value: '15,000+', label: 'Partner Businesses' },
+    { icon: "assets/housing.png", value: '15,000+', label: 'Partner Businesses' },
     { icon: "assets/image/people.png", value: '250,000+', label: 'Active Customers' },
     { icon: "assets/image/calendar.png", value: '1M+', label: 'Bookings Completed' },
     { icon: "assets/location-on.png", value: '50+', label: 'Cities Served' }
