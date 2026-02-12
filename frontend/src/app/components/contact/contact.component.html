@@ -1,0 +1,128 @@
+<div class="contact-body">
+  <div class="header-section">
+    <h1 class="title">Get in Touch</h1>
+    <p class="subtitle">
+      Connecting local businesses with their community- we are here to help!
+    </p>
+  </div>
+  <div class="message-section">
+    <h3 class="message-header">Send us a Message</h3>
+    <div class="form-section">
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label>
+            I am a :
+            <mat-form-field>
+              <mat-label>Select...</mat-label>
+              <mat-select [(value)]="selectedCategory">
+                <mat-option
+                  *ngFor="let category of Categories"
+                  [value]="category.value"
+                  >{{ category.viewValue }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+          </label>
+        </div>
+        <div>
+          <label>
+            Full Name
+            <input type="text" formControlName="name" />
+            <p
+              *ngIf="
+                myForm.get('name')?.invalid &&
+                (myForm.get('name')?.dirty || myForm.get('name')?.touched)
+              "
+              class="in-valid"
+            >
+              This field is required
+            </p>
+          </label>
+        </div>
+        <div>
+          <label>
+            Phone Number
+            <input type="tel" formControlName="phone" />
+            <p
+              *ngIf="
+                myForm.get('name')?.invalid &&
+                (myForm.get('name')?.dirty || myForm.get('name')?.touched)
+              "
+              class="in-valid"
+            >
+              This field is required
+            </p>
+          </label>
+        </div>
+        <div>
+          <label>
+            Subject
+            <input type="text" formControlName="subject" />
+            <p
+              *ngIf="
+                myForm.get('name')?.invalid &&
+                (myForm.get('name')?.dirty || myForm.get('name')?.touched)
+              "
+              class="in-valid"
+            >
+              This field is required
+            </p>
+          </label>
+        </div>
+        <div>
+          <textarea
+            n
+            cols="30"
+            rows="10"
+            placeholder="Tell us how we can help you connect with your local community...."
+          ></textarea>
+        </div>
+        <button type="submit" [disabled]="myForm.invalid">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="contactInfo">
+    <h3 class="contactInfoHeader">Contact Information</h3>
+  </div>
+  <div>
+    <div class="contactInfoContainer">
+      <div class="contact-email">
+        <h3 class="contact-heading">Email</h3>
+        <p class="contact-detail">info&#64;connectlocal.com</p>
+        <p class="contact-detail">support&#64;localconnect.com</p>
+      </div>
+
+      <div class="contact-phone">
+        <h3 class="contact-heading">Phone</h3>
+        <p class="contact-detail">Business Inquiries: 1-800-123-4567</p>
+        <p class="contact-detail">Customer Support: 1-800-123-4567</p>
+      </div>
+
+      <div class="contact-address">
+        <h3 class="contact-heading">Address</h3>
+        <p class="contact-detail">123 Main St, Anytown, USA 12345</p>
+      </div>
+    </div>
+
+    <div class="businessHr">
+      <div>
+        <h3>Business Hours</h3>
+      </div>
+      <div>
+        <h4>Customer Support</h4>
+        <p>Monday - Friday: 9am - 5pm</p>
+        <p>Saturday: 10am - 2pm</p>
+      </div>
+      <div>
+        <h4>Business Onboarding</h4>
+        <p>Monday - Friday: 9am - 5pm</p>
+        <p>Saturday: 10am - 2pm</p>
+      </div>
+      <div>
+        <h4>Technical Support and Emergency Support</h4>
+        <p>24/7</p>
+        <p>For Platform Issues</p>
+      </div>
+    </div>
+  </div>
+</div>

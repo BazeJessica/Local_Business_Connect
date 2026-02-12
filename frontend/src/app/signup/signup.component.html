@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="header-section">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <h1 class="main-title">Welcome to BusinessConnect</h1>
+    <h3 class="subtitle">
+      Sign up to explore opportunities tailored for you
+    </h3>
+    
+  <!-- Customer Form -->
+  <div class="customer-container">
+    <div class="name">
+      <label>Full Name</label>
+      <input type="text" placeholder="John Doe" />
+    </div>
+    <div class="email">
+      <label>Email Address</label>
+      <input type="email" placeholder="you@example.com" />
+    </div>
+    <div class="password">
+      <label>Password</label>
+      <input type="password" placeholder="*******" />
+    </div>
+    <div class="confirm-pass">
+      <label>Confirm Password</label>
+      <input type="password" placeholder="*******" />
+    </div>
+    <div class="button">
+      <button type="submit" (click)="signupCustomer()">Create Account</button>
+    </div>
+    <div>
+      <p>
+        Already have an account?
+        <span><a href="/login">Signin</a></span>
+      </p>
+    </div>
+    <p>By signing up, you agree to our Terms of Services and Privacy Policy</p>
+  </div>
+</div>

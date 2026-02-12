@@ -1,0 +1,64 @@
+/* Container */
+.business-info-container {
+    max-width: 60%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  /* Header */
+  .business-header {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .business-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #333333;
+  }
+  .business-subtitle {
+    font-size: 20px;
+    color: #343529;
+  }
+  
+  /* Form Layout */
+  .business-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Form Elements */
+  .form-label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+    font-size: 20px;
+  }
+  .form-input,
+  .form-textarea {
+    padding: 10px 12px;
+    height: 42.91px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fdfdfd;
+    transition: border 0.2s, box-shadow 0.2s;
+  }
+  .form-input:focus,
+  .form-textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    outline: none;
+  }
+  

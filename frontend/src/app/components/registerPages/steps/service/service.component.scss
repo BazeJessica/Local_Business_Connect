@@ -1,0 +1,89 @@
+/* Headings */
+.step-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #1f2937;
+  }
+  
+  .step-subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #6b7280;
+  }
+  
+  /* Checkbox Group */
+  .checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px 20px;
+  }
+  
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: #374151;
+  }
+  
+  /* Service Items */
+  #services-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .service-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+
+  }
+  
+  .service-input {
+    flex: 1 1 180px;
+    padding: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  /* Buttons */
+  .add-service-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 15px;
+  }
+  
+  .add-service-btn:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .remove-service-btn {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .remove-service-btn:hover {
+    background-color: #dc2626;
+  }
+  

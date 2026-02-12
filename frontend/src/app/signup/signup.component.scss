@@ -1,0 +1,176 @@
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* Header */
+.header-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  padding-top: 20px;
+  width: 100px;
+  height: auto;
+}
+
+.main-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+
+/* Form Containers */
+.business-container, .customer-container {
+  margin-top: 24px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form Fields */
+.name, .email, .password, .confirm-pass {
+  display: flex;
+  text-align: left;
+  padding-bottom: 15px;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+}
+
+label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+input {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 4px rgba(74, 144, 226, 0.4);
+}
+
+/* Buttons */
+.button button {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button button:hover {
+  background: #357abd;
+}
+
+/* Footer text */
+p {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 16px;
+  color: #8f8c8c;
+
+  span{
+    color: #4a90e2;
+    cursor: pointer;
+    font-weight: 600;
+  }
+}
+
+/* ===================== */
+/* Responsive Design */
+/* ===================== */
+
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+  .main-title {
+    font-size: 26px;
+  }
+  .subtitle {
+    font-size: 15px;
+  }
+  .toggle_buttons {
+    flex-direction: row;
+  }
+  .guest, .business {
+    flex: 1 1 48%;
+  }
+}
+
+/* Mobile Devices (≤ 768px) */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+  .main-title {
+    font-size: 24px;
+  }
+  .guest, .business {
+    flex: 1 1 100%;
+  }
+  .guest h2, .business h2 {
+    font-size: 15px;
+  }
+  input {
+    font-size: 15px;
+    padding: 12px;
+  }
+  .button button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 22px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+  label {
+    font-size: 14px;
+  }
+  input {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .button button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,44 @@
+<section class="how-it-works">
+    <div class="header">
+      <h2>How it Works</h2>
+      <p>Simple, powerful tools that work for everyone</p>
+    </div>
+  
+    <div class="tab-buttons">
+      <button
+        (click)="setActiveTab('businesses')"
+        [ngClass]="{
+          'active-tab': activeTab === 'businesses',
+          'inactive-tab': activeTab !== 'businesses'
+        }"
+      >
+        For Businesses
+      </button>
+      <button
+        (click)="setActiveTab('customers')"
+        [ngClass]="{
+          'active-tab': activeTab === 'customers',
+          'inactive-tab': activeTab !== 'customers'
+        }"
+      >
+        For Customers
+      </button>
+    </div>
+  
+    <div *ngIf="activeTab === 'businesses'" class="tab-content">
+      <div *ngFor="let flow of businessFlow" class="step">
+        <div class="step-number">{{ flow.step }}</div>
+        <h2>{{ flow.title }}</h2>
+        <p>{{ flow.description }}</p>
+      </div>
+    </div>
+  
+    <div *ngIf="activeTab === 'customers'" class="tab-content">
+      <div *ngFor="let flow of customerFlow" class="step">
+        <div class="step-number">{{ flow.step }}</div>
+        <h2>{{ flow.title }}</h2>
+        <p>{{ flow.description }}</p>
+      </div>
+    </div>
+  </section>
+  

@@ -1,0 +1,39 @@
+.testimonials-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  .testimony-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 350px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    scroll-snap-align: start;
+
+    .testimony-description {
+      font-size: 16px;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+  .testimony-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+}

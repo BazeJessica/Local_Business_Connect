@@ -1,0 +1,177 @@
+.dashboard-container {
+    padding: 2rem;
+    background-color: #f9fafb;
+    color: #1f2937;
+  }
+  
+  /* Header */
+  .overview-header {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #111827;
+  }
+  
+  /* 📊 Statistics Section */
+  .stats-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .stat-card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    flex: 1 1 220px;
+    min-width: 200px;
+    max-width: 250px;
+  }
+  
+  .stat-title {
+    font-size: 1rem;
+    color: #99a3b8;
+    margin-bottom: 0.25rem;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #111827;
+  }
+  
+  .stat-change {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #3510b9; // green for positive change
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-change img {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+  }
+  
+  .stat-note {
+    color: #6b7280;
+    margin-left: 4px;
+  }
+  
+  .stat-icon img {
+    width: 32px;
+    height: 32px;
+    opacity: 0.8;
+  }
+  
+  /* 📅 Recent Bookings Section */
+  .bookings-section {
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #374151;
+  }
+  
+  .booking-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  }
+  
+  .booking-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .booking-name {
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+  
+  .booking-service {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .booking-meta {
+    text-align: right;
+  }
+  
+  .booking-time {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  .booking-status {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+  }
+  
+  .status-confirmed {
+    background-color: #d1fae5;
+    color: #065f46;
+  }
+  
+  .status-pending {
+    background-color: #fef3c7;
+    color: #92400e;
+  }
+  
+  /* 📈 Performance Metrics Section */
+  .metrics-section {
+    margin-bottom: 2rem;
+  }
+  
+  .metric-card {
+    margin-bottom: 1rem;
+  }
+  
+  .metric-name {
+    font-size: 0.9rem;
+    color: #374151;
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  
+  .metric-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .metric-bar-bg {
+    background-color: #e5e7eb;
+    height: 8px;
+    border-radius: 999px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .metric-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+  }
+  
+  .metric-percent {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #374151;
+  }
+  
+  
