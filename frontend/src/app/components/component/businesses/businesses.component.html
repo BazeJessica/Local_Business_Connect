@@ -1,18 +1,16 @@
 <div class="business-list-container">
-    <div *ngFor="let business of visibleBusinesses" class="business-card">
+  @for (business of visibleBusinesses; track $index) {
+    <div class="business-card">
       <img [src]="business.img" [alt]="business.name" />
       <h3>{{ business.name }}</h3>
       <p>{{ business.description }}</p>
       <small>{{ business.category }}</small>
     </div>
-  </div>
-  
-  <button
-  *ngIf="visibleBusinesses.length < businesses.length"
-  [routerLink]="['/businessServices']"
-  class="explore-button"
->
-  Explore All Businesses
-</button>
+  }
+</div>
 
-  
+@if (visibleBusinesses.length < businesses.length) {
+  <button class="explore-button">Explore All Businesses</button>
+} @else {
+  <p class="no-more-message">No more businesses to show.</p>
+}

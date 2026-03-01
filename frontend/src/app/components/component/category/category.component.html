@@ -1,5 +1,6 @@
 <div class="category-card-container">
-  <div class="card" *ngFor="let category of categories">
+  @for (category of filteredCategories; track $index) {
+  <div class="card">
     <img
       [src]="category.img"
       alt="{{ category.name }}"
@@ -13,4 +14,5 @@
       <a [href]="category.url"><button>Explore</button></a>
     </div>
   </div>
+  }
 </div>

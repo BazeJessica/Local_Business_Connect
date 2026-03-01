@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component} from '@angular/core';
+import { categoryType } from '../../types/types';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,27 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  constructor(private dialog: MatDialog) {}
+  allCategories: categoryType[]=[];
+  filteredCategories: categoryType[] = [];
+
+
+  onCategoriesLoaded(categories: categoryType[]) {
+    this.allCategories = categories;
+    this.filteredCategories = categories;
+
+  }
+
+  filteredCategory(event: Event) {
+    const input = event.target;
+    let searchIterm = '';
+    if (input instanceof HTMLInputElement) {
+      searchIterm = input.value.toLowerCase();
+    }
+    this.filteredCategories = this.allCategories.filter(cat =>
+      cat.name.toLowerCase().includes(searchIterm)
+    );
+  }
+  isAuthenticated = false; // This should be set based on your authentication logic
   valueItems = [
     {
       icon: "🔍",
@@ -31,6 +51,4 @@ export class HomeComponent {
       description: "All professionals are background-checked and insured for your peace of mind"
     }
   ];  
-authenticated: boolean = false;
-
 }

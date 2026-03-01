@@ -1,11 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
-
 @Component({
   selector: 'app-login',
-  standalone: false,
+ standalone: false,
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -15,12 +12,7 @@ export class LoginComponent {
   showPassword = false;
   isLoading = false;
 
-  constructor(
-    private fb: FormBuilder,
-    private router: Router
-    ,private dialog: MatDialog
-    
-  ) {}
+  private fb = inject(FormBuilder);
 
   ngOnInit(): void {
     this.initializeForm();
@@ -72,7 +64,7 @@ export class LoginComponent {
 
   onSocialLogin(provider: string): void {
     console.log(`Social login with ${provider}`);
-    alert(`${provider} login integration coming soon!`);
+    alert(`${provider} login implementation coming soon!`);
   }
 
   private markFormGroupTouched(formGroup: FormGroup): void {

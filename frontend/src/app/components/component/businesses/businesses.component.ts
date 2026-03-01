@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { businesseType } from '../../../../types/types';
 
 @Component({
   selector: 'app-businesses',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './businesses.component.scss'
 })
 export class BusinessesComponent {
-  businesses = [
+  businesses: businesseType[] = [
     {
       id: 1,
       name: 'Sparkle Cleaners',
@@ -59,7 +60,7 @@ export class BusinessesComponent {
     },
     // Add as many more as needed...
   ];
-visibleBusinesses: any = [];
+visibleBusinesses: businesseType[] = [];
 itemsToShow = 6;
 
 ngOnInit() {
