@@ -13,3 +13,11 @@ export interface categoryType {
   img: string;
   url: string;
 }
+
+export interface businessServiceType{
+    id: number;
+    name: string;
+    category: string;
+    description: string;
+    img: string;
+}
