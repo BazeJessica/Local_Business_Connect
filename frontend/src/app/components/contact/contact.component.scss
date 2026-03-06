@@ -1,0 +1,249 @@
+.contact-body {
+  padding: 4rem 10%;
+  color: #ffffff;
+  background-color: #522dd6;
+
+  /* HEADER */
+  .header-section {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .title {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1e9ce5;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+  }
+
+  /* MESSAGE FORM */
+  .message-section {
+    background: #ffffff;
+    color: #000;
+    padding: 2.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .message-header {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      color: #1e88e5;
+      text-align: center;
+    }
+
+    .form-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        label {
+          font-weight: 500;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        input,
+        textarea,
+        mat-form-field {
+          width: 100%;
+          padding: 0.75rem;
+          font-size: 1rem;
+          border-radius: 0.5rem;
+          border: 1px solid #ccc;
+        }
+
+        textarea {
+          resize: vertical;
+        }
+
+        .in-valid {
+          color: red;
+        }
+
+        button[type="submit"] {
+          align-self: flex-start;
+          padding: 0.85rem 2rem;
+          background-color: #1e88e5;
+          color: white;
+          border: none;
+          border-radius: 0.5rem;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover:not([disabled]) {
+            background-color: #1565c0;
+          }
+
+          &:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+
+  /* CONTACT INFO CARDS */
+  .contactInfo {
+    margin-bottom: 3rem;
+
+    .contactInfoHeader {
+      font-size: 1.75rem;
+      color: #1e88e5;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  .contactInfoContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+
+    .contact-email,
+    .contact-phone,
+    .contact-address {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        transform: translateY(-3px);
+      }
+
+      .contact-heading {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #1e88e5;
+        margin-bottom: 0.75rem;
+      }
+
+      .contact-detail {
+        font-size: 1rem;
+        color: #ffffff;
+        line-height: 1.5;
+        margin: 0.25rem 0;
+      }
+    }
+  }
+
+  /* BUSINESS HOURS / INFO SECTION */
+  .businessHr {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+
+    div {
+      text-align: center;
+
+      h3,
+      h4 {
+        color: #037de9;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        color: #ffffff;
+        font-size: 0.95rem;
+        margin: 0.25rem 0;
+      }
+    }
+  }
+
+  /* ====================== RESPONSIVE ====================== */
+  @media (max-width: 1024px) {
+    padding: 3rem 5%;
+
+    .header-section .title {
+      font-size: 2.5rem;
+    }
+
+    .header-section .subtitle {
+      font-size: 1.15rem;
+    }
+
+    .message-section {
+      padding: 2rem;
+    }
+
+    .contactInfoContainer {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    .businessHr {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 2rem;
+
+    .header-section .title {
+      font-size: 2rem;
+    }
+
+    .header-section .subtitle {
+      font-size: 1rem;
+    }
+
+    .message-section {
+      padding: 1.5rem;
+    }
+
+    .contactInfoContainer,
+    .businessHr {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .contact-email,
+    .contact-phone,
+    .contact-address {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-section .title {
+      font-size: 1.75rem;
+    }
+
+    .header-section .subtitle {
+      font-size: 0.95rem;
+    }
+
+    .message-section {
+      padding: 1rem;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

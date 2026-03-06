@@ -1,0 +1,109 @@
+.dialog-container {
+    width: 600px;
+    max-width: 90%;
+    padding: 24px;
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .dialog-container .header img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 12px;
+  }
+  
+  .dialog-container .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 8px 0;
+    color: #333;
+  }
+  
+  .dialog-container .subtitle {
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 4px 0 16px;
+    color: #666;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+    margin: 16px 0;
+  }
+  
+  .business-panel,
+  .consumer-panel {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .business-panel:hover,
+  .consumer-panel:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+  
+  .business-panel img,
+  .consumer-panel img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+  }
+  
+  .business-panel h2,
+  .consumer-panel h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #222;
+  }
+  
+  .business-panel p,
+  .consumer-panel p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 16px;
+  }
+  
+  .action-button {
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    background-color: #1976d2;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dialog-container > div:last-child {
+    margin-top: 16px;
+    font-size: 0.9rem;
+    color: #444;
+  }
+  
+  .dialog-container span {
+    color: #1976d2; 
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .dialog-container span:hover {
+    text-decoration: underline;
+  }
+  

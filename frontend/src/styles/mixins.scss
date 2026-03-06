@@ -1,0 +1,89 @@
+@mixin hero_container {
+    height: 315px;
+    width: 100%;
+    background-color: #CDD3E3;
+    border-bottom-left-radius: 50% 10%;
+    border-bottom-right-radius: 50% 10%;
+    box-sizing: border-box;
+}
+
+@mixin mobile_xxs {
+    @media (max-width: 350px) {
+        @content;
+    }
+}
+
+@mixin mobile_xs {
+    @media (max-width: 599.98px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: 600px) and (max-width: 959.98px) {
+        @content;
+    }
+}
+
+@mixin mobile_min {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media (min-width: 960px) and (max-width: 1279.98px) {
+        @content;
+    }
+}
+
+@mixin medium_max {
+    @media (max-width: 1279.98px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: 1280px) and (max-width: 1919.98px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 600px) and (max-width: 839.98px) and (orientation: portrait), (min-width: 960px) and (max-width: 1279.98px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+$breakpoints: (
+  xs: 360px,
+  sm: 600px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+);
+
+// min-width queries
+@mixin min($size) {
+  $value: map-get($breakpoints, $size);
+  @if $value {
+    @media (min-width: #{$value}) {
+      @content;
+    }
+  } @else {
+    @warn "No breakpoint found for '#{$size}' in $breakpoints map.";
+  }
+}
+
+// max-width queries
+@mixin max($size) {
+  $value: map-get($breakpoints, $size);
+  @if $value {
+    @media (max-width: calc(#{$value} - 0.02px)) {
+      @content;
+    }
+  } @else {
+    @warn "No breakpoint found for '#{$size}' in $breakpoints map.";
+  }
+}
+
